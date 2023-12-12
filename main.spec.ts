@@ -9,7 +9,7 @@ jest.mock('fs', () => ({
     readFileSync: jest.fn().mockReturnValue('a\nb\nc\nd'),
 }));
 
-xdescribe('main', () => {
+describe('main', () => {
     it('should return added values', () => {
         (getCalibrationValueFrom as jest.Mock)
             .mockReturnValueOnce('12')
